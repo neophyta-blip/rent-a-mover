@@ -31,9 +31,24 @@
       border-radius: 8px;
       margin-bottom: 20px;
     }
-    .price {
-      font-size: 1.3em;
+    label {
+      display: block;
+      margin-top: 10px;
       font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
     footer {
       background: #e5e7eb;
@@ -59,33 +74,68 @@
   <div class="box">
     <h2>🚚 Über den Mover</h2>
     <p>
-      Ich vermiete meinen zuverlässigen Mover für Wohnwagen, Anhänger oder andere schwere Lasten.
-      Ideal für enge Stellplätze und präzises Rangieren.
+      Ich vermiete meinen zuverlässigen Mover zum Rangieren von Wohnwagen,
+      Anhängern oder anderen schweren Lasten. Ideal für enge Stellplätze
+      und präzises Manövrieren.
     </p>
   </div>
 
   <div class="box">
     <h2>💰 Preise</h2>
-    <p class="price">Ab 40 € pro Tag</p>
-    <p>Langzeitmiete und Wochenendpreise auf Anfrage.</p>
+    <p><strong>Ab 40 € pro Tag</strong></p>
+    <p>Wochenend- & Langzeitmiete auf Anfrage.</p>
   </div>
 
   <div class="box">
-    <h2>📞 Kontakt</h2>
+    <h2>📍 Standort & Abholung</h2>
     <p>
-      Schreib mir einfach eine E-Mail:<br>
-      <strong>📧 roland.janoschka@gmail.com</strong>
+      Abholung nach Terminvereinbarung.<br>
+      <strong>Standort:</strong> Am Honigshuck 1c, 47506 Neukirchen-Vluyn
     </p>
+  </div>
+
+  <div class="box">
+    <h2>📝 Mietanfrage</h2>
+    <form action="mailto:roland.janoschka@gmail.com" method="post" enctype="text/plain">
+      <label>Name</label>
+      <input type="text" name="Name" required>
+
+      <label>E-Mail</label>
+      <input type="email" name="E-Mail" required>
+
+      <label>Gewünschter Mietzeitraum</label>
+      <input type="text" name="Zeitraum">
+
+      <label>Nachricht</label>
+      <textarea name="Nachricht" rows="4"></textarea>
+
+      <button type="submit">Anfrage senden</button>
+    </form>
+    <p style="font-size:0.9em;">(E-Mail-Programm öffnet sich automatisch)</p>
+  </div>
+
+  <div class="box">
+    <h2>📄 Impressum</h2>
     <p>
-      Oder ruf mich an:<br>
-      <strong>📱 0173 4632078 </strong>
+      Janoschka<br>
+      Am Honigshuck 1c<br>
+      47506 Neukirchen-Vluyn<br><br>
+      E-Mail: roland.janoschka@gmail.com
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>🔒 Datenschutz</h2>
+    <p>
+      Personenbezogene Daten werden ausschließlich zur Bearbeitung von
+      Mietanfragen verwendet und nicht an Dritte weitergegeben.
+      Die über das Formular gesendeten Daten werden per E-Mail übermittelt.
     </p>
   </div>
 </section>
 
 <footer>
-  © 2026 Rent a Mover – Janoschka<br>
-  Privatvermietung
+  © 2026 Rent a Mover – Janoschka · Privatvermietung
 </footer>
 
 </body>
