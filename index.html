@@ -4,61 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rent a Mover – Janoschka</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #f9fafb, #e5e7eb);
+      color: #1f2937;
     }
     header {
-      background: #1f2937;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
     section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 50px auto;
       padding: 0 20px;
     }
     h2 {
-      color: #1f2937;
+      margin-top: 0;
     }
     .box {
       background: white;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
     label {
       display: block;
-      margin-top: 10px;
-      font-weight: bold;
+      margin-top: 12px;
+      font-weight: 600;
     }
     input, textarea {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
     }
     button {
-      margin-top: 15px;
-      padding: 10px 20px;
+      margin-top: 20px;
+      padding: 12px 25px;
       background: #2563eb;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1em;
       cursor: pointer;
     }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
     footer {
-      background: #e5e7eb;
+      background: #1f2937;
+      color: #d1d5db;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       font-size: 0.9em;
     }
-    a {
-      color: #2563eb;
+
+    /* WhatsApp Button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: bold;
       text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
   </style>
 </head>
@@ -66,7 +95,7 @@
 
 <header>
   <h1>Rent a Mover</h1>
-  <p>Professionelle Mover-Vermietung</p>
+  <p>Einfach. Präzise. Zuverlässig.</p>
   <p><strong>Anbieter: Janoschka</strong></p>
 </header>
 
@@ -74,9 +103,8 @@
   <div class="box">
     <h2>🚚 Über den Mover</h2>
     <p>
-      Ich vermiete meinen zuverlässigen Mover zum Rangieren von Wohnwagen,
-      Anhängern oder anderen schweren Lasten. Ideal für enge Stellplätze
-      und präzises Manövrieren.
+      Vermietung eines leistungsstarken Movers zum Rangieren von Wohnwagen
+      und Anhängern – perfekt für enge Stellplätze und millimetergenaues Manövrieren.
     </p>
   </div>
 
@@ -88,10 +116,10 @@
 
   <div class="box">
     <h2>📍 Standort & Abholung</h2>
-    <p>
-      Abholung nach Terminvereinbarung.<br>
-      <strong>Standort:</strong> Am Honigshuck 1c, 47506 Neukirchen-Vluyn
-    </p>
+    <p><strong>Am Honigshuck 1c, 47506 Neukirchen-Vluyn</strong></p>
+    <iframe 
+      src="https://www.google.com/maps?q=Musterstraße%201%2012345%20Musterstadt&output=embed">
+    </iframe>
   </div>
 
   <div class="box">
@@ -103,7 +131,7 @@
       <label>E-Mail</label>
       <input type="email" name="E-Mail" required>
 
-      <label>Gewünschter Mietzeitraum</label>
+      <label>Mietzeitraum</label>
       <input type="text" name="Zeitraum">
 
       <label>Nachricht</label>
@@ -111,13 +139,12 @@
 
       <button type="submit">Anfrage senden</button>
     </form>
-    <p style="font-size:0.9em;">(E-Mail-Programm öffnet sich automatisch)</p>
   </div>
 
   <div class="box">
     <h2>📄 Impressum</h2>
     <p>
-      Janoschka<br>
+      Roland Janoschka<br>
       Am Honigshuck 1c<br>
       47506 Neukirchen-Vluyn<br><br>
       E-Mail: roland.janoschka@gmail.com
@@ -127,9 +154,8 @@
   <div class="box">
     <h2>🔒 Datenschutz</h2>
     <p>
-      Personenbezogene Daten werden ausschließlich zur Bearbeitung von
-      Mietanfragen verwendet und nicht an Dritte weitergegeben.
-      Die über das Formular gesendeten Daten werden per E-Mail übermittelt.
+      Personenbezogene Daten werden ausschließlich zur Bearbeitung von Mietanfragen verwendet
+      und nicht an Dritte weitergegeben.
     </p>
   </div>
 </section>
@@ -137,6 +163,13 @@
 <footer>
   © 2026 Rent a Mover – Janoschka · Privatvermietung
 </footer>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp" 
+   href="https://wa.me/491734632078" 
+   target="_blank">
+  💬 WhatsApp
+</a>
 
 </body>
 </html>
